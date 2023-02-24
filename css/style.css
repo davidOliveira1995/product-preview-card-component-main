@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+  font-family: 'Fraunces', serif; 500 - 700
+  font-family: 'Montserrat', sans-serif; 700
+*/
+
+:root {
+  /*
+  ### Primary
+*/
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  /*
+  ### Neutral
+*/
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color: var(--Cream);
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    width: 600px;
+    height: 380px;
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card-product--img {
+    width: 300px;
+    height: 380px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .card-info--title {
+    padding-right: 20px;
+  }
+
+  .card-info--paragraphy {
+    padding-right: 20px;
+  }
+
+  .btn {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 350px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+
+  .card-product--img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 27px;
+  }
+
+  .card-product--img {
+    width: 350px;
+    height: auto;
+  }
+
+  .attribution {
+    display: none;
+  }
+
+  .btn {
+    width: 300px;
+  }
+}
+
+/* CARD CONFIG GLOBAL */
+.card {
+  background-color: var(--White);
+}
+
+/* CARD INFO */
+
+.card-info--subtitle {
+  color: var(--Dark-grayish-blue);
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.card-info--title {
+  font-size: 2.2em;
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.card-info--paragraphy {
+  color: var(--Dark-grayish-blue);
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* CARD PRICE */
+.card-price {
+  font-family: 'Fraunces', serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-price--payment {
+  color: var(--Dark-cyan);
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.card-price--oldprice {
+  color: var(--Dark-grayish-blue);
+  font-weight: 100;
+  text-decoration: line-through;
+}
+
+/* BUTTON */
+.btn {
+  color: var(--White);
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--Dark-cyan);
+  border: 0;
+  margin-bottom: 15px;
+}
+
+.btn img {
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-color: hsl(159, 42%, 29%);
+}
